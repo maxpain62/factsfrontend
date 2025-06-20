@@ -55,7 +55,7 @@ function App() {
     try {
       //const res = await fetch("http://localhost:8000/getData");
       const res = await fetch(`${process.env.REACT_APP_API_URL}/getData`);
-      console.log("Fetching from:", `${process.env.REACT_APP_API_URL}/getData`);
+      console.log("Fetching from:", `${process.env.REACT_APP_API_URL}`);
       const data = await res.json();
       setFacts(data);
     } catch (error) {
