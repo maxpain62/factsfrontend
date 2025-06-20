@@ -146,7 +146,7 @@ function NewFactForm({ setFacts, setShowForm }) {
       // setCategory("");
       // //6 close the form
       // setShowForm(false);
-      const res = await fetch("http://localhost:8000/createFact", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/createFact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -243,13 +243,16 @@ function FactList({ facts, fetchFacts }) {
 function Fact({ fact, fetchFacts }) {
   async function handelVote(type) {
     try {
-      const response = await fetch(`http://localhost:8000/vote/${fact.id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ type }),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/vote/${fact.id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ type }),
+        }
+      );
 
       if (!response.ok) throw new Error("Failed to update vote");
 
