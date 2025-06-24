@@ -84,10 +84,6 @@ header {
   text-transform: uppercase;
 }
 
-/* .factForm > input:first-child {
-  width: 60%;
-} */
-
 .main {
   gap: 10px;
   display: grid;
@@ -134,16 +130,6 @@ li {
 .factlist a {
   display: inline;
 }
-
-/* .factlistchild {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-} */
-
-/* .factlist p {
-  width: 70%;
-} */
 
 span {
   width: 10%;
@@ -203,36 +189,3 @@ span {
 .news {
   background-color: #8b5cf6;
 }
-
-/* @media (max-width: 900px) {
-  .container {
-    width: 100%;
-  }
-
-  .main {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .categoryBtn {
-    width: 50%;
-  }
-
-  .factForm {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .factForm input,
-  select,
-  .factForm button,
-  .factForm input:first-child {
-    height: 30px;
-    width: 100%;
-  }
-}
-@media (max-width: 1000px) {
-  .container {
-    width: 100%;
-  }
-} */
